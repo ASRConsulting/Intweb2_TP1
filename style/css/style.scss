@@ -1,0 +1,90 @@
+/* Block - Global */
+* {
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f2f1fb;
+}
+
+/* Block - Headings */
+.headings {
+  font-family: "montserrat", sans-serif;
+  color: #f09782;
+  font-weight: bold;
+}
+
+.headings--h2,
+.headings__h3 {
+  font-size: 300;
+}
+
+/* Block - Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  background-color: #f09782;
+  
+}
+
+/* Block - Header */
+header {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+/* Block - Nav */
+.nav__list {
+  list-style: none;
+  display: flex;
+}
+.nav__item {
+  display: inline;
+}
+.nav__item:last-child {
+  margin-right: 2em;
+}
+.nav__link {
+  color: #1a1824;
+  text-decoration: none;
+  margin-right: 2em;
+  font-weight: 700;
+}
+.nav__link--active {
+  font-weight: bold;
+  color: #1a1824;
+  background-color: #fff;
+}
+
+/* Block - Menu Icon (can be nested under Nav or separate) */
+.menu-icon {
+  width: 30px;
+  height: 20;
+}
+
+.barre-recherche {
+  display: flex;
+  margin: 20px auto;
+  width: 500px;
+}
+
+.barre-recherche__input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.barre-recherche__button {
+  background-color:#f09782;
+  padding: 2em 2em;
+  margin-left: 2em;
+}
