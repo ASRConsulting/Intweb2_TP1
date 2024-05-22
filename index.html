@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="container">
+    <header class="header container">
         
     <h1> <a href="index.html"> <img width="80%" src="img/Outaouais_logo.png" alt="Région de l'Outaouais"> </a>
     </h1>
@@ -41,13 +41,23 @@
     <main>
         
             <div class="container" align="center"> <video width="90%" align="center" src="https://www.tourismeoutaouais.com/video_hero_printemps_2023-2/" loop autoplay muted preload="metadata" poster="//www.tourismeoutaouais.com/wp-content/uploads/2023/05/Video_Hero_Printemps_2023.jpg"></video></div>
-        <section>
-          <div class="barre-recherche">
-            <input type="text" class="barre-recherche__input" placeholder="Quoi faire en Outaouais?">
-            <button class="barre-recherche__button">Découvrez l'Outaouais</button>
+            <div class="container search-bar-container">
+              <div class="search-bar__content">
+                <p class="search-bar__p">Vous comptez visiter l'Outaouais, alors vous êtes sur la bonne page, vous y trouverez toutes les informations pour en profiter seul ou en famille !</p>
+                <form class="search-bar__form">
+                  <input type="text" class="search-bar__input" placeholder="Quoi faire en Outaouais?" aria-label="Rechercher dans l'Outaouais">
+                  <button type="submit" class="search-bar__button">Découvrez l'Outaouais</button>
+                </form>
+              </div>
+            </div>
+          <div class="guide">
+            <button class="btn btn--primary btn--large">Recevez le guide Découvrir l'Outaouais</button>
           </div>
+            <section>
+          
             <div> <h2 class="headings">L'Outaouais, où la nature et la ville se rencontrent</h2>section1</div>
         </section>
+        
         <section>
             <div>section2</div>
         </section>

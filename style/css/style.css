@@ -1,93 +1,148 @@
-/* Block - Global */
+/* Variables */
+/* Base styles */
 * {
+  box-sizing: border-box;
   font-family: "roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #f2f1fb;
 }
 
-/* Block - Headings */
+body {
+  background-color: #f2f1fb;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
 .headings {
   font-family: "montserrat", sans-serif;
   color: #f09782;
   font-weight: bold;
 }
 
-.headings--h2,
+.headings__h2,
 .headings__h3 {
-  font-size: 300;
+  font-size: 3rem;
 }
 
-/* Block - Container */
+/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   width: 90%;
-  background-color: #f09782;
 }
 
-/* Block - Header */
-header {
+/* Header */
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Block - Nav */
+/* Navigation */
 .nav__list {
   list-style: none;
   display: flex;
 }
-
 .nav__item {
   display: inline;
 }
-
 .nav__item:last-child {
   margin-right: 2em;
 }
-
 .nav__link {
   color: #1a1824;
   text-decoration: none;
   margin-right: 2em;
   font-weight: 700;
 }
-
 .nav__link--active {
   font-weight: bold;
   color: #1a1824;
   background-color: #fff;
 }
 
-/* Block - Menu Icon (can be nested under Nav or separate) */
+/* Menu Icon */
 .menu-icon {
   width: 30px;
-  height: 20;
+  height: 20px;
 }
 
-.barre-recherche {
+/* Search Bar */
+.search-bar-container {
   display: flex;
-  margin: 20px auto;
-  width: 500px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; /* Adjust spacing as needed */
 }
 
-.barre-recherche__input {
+.search-bar__content {
+  text-align: center;
+  width: 80%; /* Adjust width as needed */
+  max-width: 1000px;
+}
+
+.search-bar__p {
+  font-size: 18px;
+  color: #a29458;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.search-bar__form {
+  display: flex;
+}
+
+.search-bar__input {
   flex: 1;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  outline: none;
 }
 
-.button {
+.search-bar__button {
+  background-color: #a29458; /* Use your primary color variable */
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar__button:hover {
+  background-color: #817646; /* Use your primary color variable */
+}
+
+/* Button */
+.button, .btn {
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.barre-recherche__button {
+.guide {
+  text-align: center;
   background-color: #f09782;
-  padding: 2em 2em;
-  margin-left: 2em;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.btn--primary {
+  background-color: #a29458;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: #817646;
+}
+
+.btn--large {
+  font-size: 18px;
 }
