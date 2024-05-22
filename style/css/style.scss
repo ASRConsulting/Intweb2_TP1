@@ -159,3 +159,63 @@ body {
 .btn--large {
   font-size: 18px;
 }
+.decouvrir {
+  background-coloe:$primary-color;
+  padding: 20px;
+}
+
+#Découvrir-a:hover {
+  background-color:$primary-color;
+}
+
+.decouvrir__h2 {
+  @extend .headings;
+  text-align: center;
+}
+
+.decouvrir__contenu {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.decouvrir__h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.decouvrir__p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.decouvrir__blocs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.decouvrir__bloc {
+  flex: 1 0 33%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.decouvrir__bloc img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.decouvrir__bloc h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.decouvrir__bloc p {
+  font-size: 14px;
+  line-height: 1.5;
+}
