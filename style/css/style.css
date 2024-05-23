@@ -1,6 +1,3 @@
-@charset "UTF-8";
-/* Variables */
-/* Base styles */
 * {
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
@@ -14,33 +11,26 @@ body {
   padding: 0;
 }
 
-/* Headings */
-.headings, .decouvrir__h2 {
+.headings, .chiffres__title, .decouvrir__title {
   font-family: "montserrat", sans-serif;
   color: #f09782;
   font-weight: bold;
 }
-
-.headings__h2,
-.headings__h3 {
+.headings__h2, .headings__h3 {
   font-size: 3rem;
 }
 
-/* Container */
-.container {
+.container, .chiffres {
   max-width: 1200px;
   margin: 0 auto;
   width: 90%;
 }
 
-/* Header */
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* Navigation */
 .nav__list {
   list-style: none;
   display: flex;
@@ -48,7 +38,7 @@ body {
 .nav__item {
   display: inline;
 }
-.nav__item:last-child {
+.nav__item--last {
   margin-right: 2em;
 }
 .nav__link {
@@ -63,37 +53,24 @@ body {
   background-color: #fff;
 }
 
-/* Menu Icon */
 .menu-icon {
   width: 30px;
   height: 20px;
 }
-
-/* Search Bar */
-.search-bar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px; /* Adjust spacing as needed */
-}
-
 .search-bar__content {
   text-align: center;
-  width: 80%; /* Adjust width as needed */
+  width: 80%;
   max-width: 1000px;
 }
-
-.search-bar__p {
+.search-bar__text {
   font-size: 18px;
   color: #a29458;
   line-height: 1.5;
   margin-bottom: 20px;
 }
-
 .search-bar__form {
   display: flex;
 }
-
 .search-bar__input {
   flex: 1;
   padding: 15px;
@@ -102,9 +79,8 @@ body {
   font-size: 16px;
   outline: none;
 }
-
 .search-bar__button {
-  background-color: #a29458; /* Use your primary color variable */
+  background-color: #a29458;
   color: #fff;
   padding: 15px 20px;
   border: none;
@@ -112,16 +88,24 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 .search-bar__button:hover {
-  background-color: #817646; /* Use your primary color variable */
+  background-color: #817646;
 }
 
-/* Button */
-.button, .btn {
+.button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+.button--primary {
+  background-color: #a29458;
+  color: #fff;
+}
+.button--primary:hover {
+  background-color: #817646;
+}
+.button--large {
+  font-size: 18px;
 }
 
 .guide {
@@ -129,81 +113,87 @@ body {
   background-color: #f09782;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  transition: background-color 0.3s;
-}
-
-.btn--primary {
-  background-color: #a29458;
-  color: #fff;
-}
-
-.btn--primary:hover {
-  background-color: #817646;
-}
-
-.btn--large {
-  font-size: 18px;
-}
-
 .decouvrir {
-  background-coloe: #a29458;
+  color: #a29458;
+  font-weight: 900;
   padding: 20px;
 }
-
-#Découvrir-a:hover {
-  background-color: #a29458;
-}
-
-.decouvrir__h2 {
-  text-align: center;
-}
-
-.decouvrir__contenu {
+.decouvrir__content {
   max-width: 1000px;
   margin: 0 auto;
 }
-
-.decouvrir__h3 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.decouvrir__title {
+  text-align: center;
 }
-
-.decouvrir__p {
+.decouvrir__text {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 30px;
 }
-
-.decouvrir__blocs {
+.decouvrir__blocks {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
-.decouvrir__bloc {
+.decouvrir__block {
   flex: 1 0 33%;
   text-align: center;
   margin-bottom: 20px;
 }
-
-.decouvrir__bloc img {
+.decouvrir__block-img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
-
-.decouvrir__bloc h3 {
+.decouvrir__block-title {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 5px;
 }
-
-.decouvrir__bloc p {
+.decouvrir__block-text {
   font-size: 14px;
   line-height: 1.5;
+}
+
+.chiffres {
+  text-align: center;
+  padding: 50px 0;
+}
+.chiffres__title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.chiffres__text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.chiffres__blocks {
+  display: flex;
+  justify-content: space-between;
+}
+.chiffres__block {
+  width: 45%;
+}
+.chiffres__block--large {
+  margin-right: 30px;
+}
+.chiffres__block--large-img {
+  width: 70%;
+  height: auto;
+}
+.chiffres__block--small {
+  width: 50%;
+  margin-bottom: 20px;
+}
+.chiffres__block--small-img {
+  width: 50%;
+  height: auto;
+}
+
+.footer__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

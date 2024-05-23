@@ -1,10 +1,10 @@
-/* Variables */
+// Variables
 $primary-color: #a29458; // Base color for buttons
 $secondary-color: #f09782;
 $tertiary-color: #f2f1fb;
 $quaternary-color: #1a1824;
 
-/* Base styles */
+// Base styles
 * {
   box-sizing: border-box; // Ensures consistent box model for all elements
   font-family: "roboto", sans-serif;
@@ -18,33 +18,37 @@ body {
   padding: 0;
 }
 
-/* Headings */
+// Headings
 .headings {
   font-family: "montserrat", sans-serif;
   color: $secondary-color;
   font-weight: bold;
+
+  &__h2,
+  &__h3 {
+    font-size: 3rem; // Using rem unit for better scalability
+  }
 }
 
-.headings__h2,
-.headings__h3 {
-  font-size: 3rem; // Using rem unit for better scalability
-}
-
-/* Container */
+// Container
 .container {
   max-width: 1200px;
   margin: 0 auto;
   width: 90%;
 }
 
-/* Header */
+// Header
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__logo {
+    // Logo styles
+  }
 }
 
-/* Navigation */
+// Navigation
 .nav {
   &__list {
     list-style: none;
@@ -53,10 +57,10 @@ body {
 
   &__item {
     display: inline;
-  }
 
-  &__item:last-child {
-    margin-right: 2em;
+    &--last {
+      margin-right: 2em;
+    }
   }
 
   &__link {
@@ -64,158 +68,219 @@ body {
     text-decoration: none;
     margin-right: 2em;
     font-weight: 700;
-  }
 
-  &__link--active {
-    font-weight: bold;
-    color: $quaternary-color;
-    background-color: #fff;
+    &--active {
+      font-weight: bold;
+      color: $quaternary-color;
+      background-color: #fff;
+    }
   }
 }
 
-/* Menu Icon */
+// Menu Icon
 .menu-icon {
   width: 30px;
   height: 20px;
+
+  &__bar {
+    // Menu icon bar styles
+  }
 }
 
-/* Search Bar */
-.search-bar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px; /* Adjust spacing as needed */
+// Search Bar
+.search-bar {
+  &__content {
+    text-align: center;
+    width: 80%; // Adjust width as needed
+    max-width: 1000px;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: $primary-color;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  &__button {
+    background-color: $primary-color; // Use your primary color variable
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%); // Use your primary color variable
+    }
+  }
 }
 
-.search-bar__content {
-  text-align: center;
-  width: 80%; /* Adjust width as needed */
-  max-width: 1000px;
-}
-
-.search-bar__p {
-  font-size: 18px;
-  color: #a29458;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.search-bar__form {
-  display: flex;
-}
-
-.search-bar__input {
-  flex: 1;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  outline: none;
-}
-
-.search-bar__button {
-  background-color: $primary-color; /* Use your primary color variable */
-  color: #fff;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.search-bar__button:hover {
-  background-color: darken($primary-color, 10%); /* Use your primary color variable */
-}
-
-/* Button */
+// Button
 .button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  &--primary {
+    background-color: $primary-color;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($primary-color, 10%); // Using Sass function for darker shade
+    }
+  }
+
+  &--large {
+    font-size: 18px;
+  }
 }
 
+// Guide
 .guide {
   text-align: center;
   background-color: #f09782;
 }
 
-.btn {
-  @extend .button; // Reusing button styles
-
-  display: inline-block;
-  padding: 10px 20px;
-  transition: background-color 0.3s;
-}
-
-.btn--primary {
-  background-color: $primary-color;
-  color: #fff;
-}
-
-.btn--primary:hover {
-  background-color: darken($primary-color, 10%); // Using Sass function for darker shade
-}
-
-.btn--large {
-  font-size: 18px;
-}
+// Decouvrir Section
 .decouvrir {
-  background-coloe:$primary-color;
+  color: $primary-color;
+  font-weight: 900;
   padding: 20px;
+
+  &__content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @extend .headings;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  &__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__block {
+    flex: 1 0 33%;
+    text-align: center;
+    margin-bottom: 20px;
+
+    &-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
 }
 
-#Découvrir-a:hover {
-  background-color:$primary-color;
-}
-
-.decouvrir__h2 {
-  @extend .headings;
+// Chiffres Section
+.chiffres {
+  @extend .container;
   text-align: center;
+  padding: 50px 0;
+
+  &__title {
+    @extend .headings;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  &__blocks {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    width: 45%;
+
+    &--large {
+      margin-right: 30px;
+
+      &-img {
+        width: 70%;
+        height: auto;
+      }
+    }
+
+    &--small {
+      width: 50%;
+      margin-bottom: 20px;
+
+      &-img {
+        width: 50%;
+        height: auto;
+      }
+    }
+  }
 }
 
-.decouvrir__contenu {
-  max-width: 1000px;
-  margin: 0 auto;
-}
+// Footer
+.footer {
+  &__container {
+    // Container styles for footer
+  }
 
-.decouvrir__h3 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.decouvrir__p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 30px;
-}
+    &-text {
+      // Footer text styles
+    }
 
-.decouvrir__blocs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+    &-socials {
+      // Footer social links styles
 
-.decouvrir__bloc {
-  flex: 1 0 33%;
-  text-align: center;
-  margin-bottom: 20px;
-}
+      .footer__link {
+        // Social link styles
+      }
+    }
+  }
 
-.decouvrir__bloc img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.decouvrir__bloc h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.decouvrir__bloc p {
-  font-size: 14px;
-  line-height: 1.5;
+  &__separator {
+    // Footer separator styles
+  }
 }
