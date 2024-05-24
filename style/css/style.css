@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
@@ -16,11 +17,11 @@ body {
   color: #f09782;
   font-weight: bold;
 }
-.headings__h2, .headings__h3 {
+.headings__h2, .contact-container__title, .headings__h3 {
   font-size: 3rem;
 }
 
-.container, .chiffres {
+.container, .contact-container, .chiffres {
   max-width: 1200px;
   margin: 0 auto;
   width: 90%;
@@ -203,6 +204,89 @@ body {
   color: #fff;
 }
 .chiffres__button--primary:hover {
+  background-color: #817646;
+}
+
+.contact-container {
+  padding: 40px 0;
+  background: url("https://maps.app.goo.gl/tuS8wqkJRjcTF3KU8") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+.contact-container__flex {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-container__flex--vide {
+  width: 40%;
+}
+.contact-container__iframe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place l'iframe derrière le contenu de la section */
+}
+.contact-container__title {
+  margin-bottom: 20px;
+  color: #a29458;
+}
+.contact-container__form {
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+.contact-container__input-group {
+  margin-bottom: 15px;
+}
+.contact-container__input-group-label {
+  display: none;
+}
+.contact-container__input-group-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.contact-container__input-group-input::placeholder {
+  color: #999;
+}
+.contact-container__input-group-input:invalid {
+  border-color: red;
+}
+.contact-container__textarea-group {
+  margin-bottom: 15px;
+}
+.contact-container__textarea-group-textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+}
+.contact-container__textarea-group-textarea::placeholder {
+  color: #999;
+}
+.contact-container__textarea-group-textarea:invalid {
+  border-color: red;
+}
+.contact-container__button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #a29458;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  padding: 15px;
+}
+.contact-container__button:hover {
   background-color: #817646;
 }
 

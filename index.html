@@ -48,7 +48,7 @@
 
     <main class="main-content">
         <div class="video-container" align="center">
-            <video class="video-container__video" width="90%" align="center" src="https://www.tourismeoutaouais.com/video_hero_printemps_2023-2/" loop autoplay muted preload="metadata" poster="//www.tourismeoutaouais.com/wp-content/uploads/2023/05/Video_Hero_Printemps_2023.jpg"></video>
+            <video class="video-container__video" width="70%" align="center" src="https://www.tourismeoutaouais.com/video_hero_printemps_2023-2/" loop autoplay muted preload="metadata" poster="//www.tourismeoutaouais.com/wp-content/uploads/2023/05/Video_Hero_Printemps_2023.jpg"></video>
         </div>
         <div class="container search-bar">
             <div class="search-bar__content">
@@ -116,8 +116,33 @@
             <a href="https://odooutaouais.ca/projets-majeurs/etat-de-situation-socioeconomique4/etat-de-situation-socioeconomique-tourisme/" class="chiffres__button chiffres__button--primary">En savoir plus</a>
 
         </section>
-        <section id="Partenaires">Partenaires</section>
-        <section id="Contact">contact</section>
+        <section id="Contact" class="contact-container">
+            <iframe class="contact-container__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.883564212035!2d-75.71252302402702!3d45.431848435597175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce04f185e8515f%3A0x41afa59cc8000d0f!2sTourisme%20Outaouais!5e0!3m2!1sen!2sca!4v1716526737672!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact-container__flex">
+                <div class="contact-container__flex--vide"></div>
+            <form class="contact-container__form" action="#" method="POST" novalidate>
+                <h2 class="contact-container__title">Contactez-nous</h2>
+                <div class="contact-container__input-group">
+                <label for="lastName" class="contact-container__input-group-label">Nom de famille</label>
+                <input type="text" id="lastName" name="lastName" class="contact-container__input-group-input" placeholder="Nom de famille" required>
+              </div>
+              <div class="contact-container__input-group">
+                <label for="firstName" class="contact-container__input-group-label">Prénom</label>
+                <input type="text" id="firstName" name="firstName" class="contact-container__input-group-input" placeholder="Prénom" required>
+              </div>
+              <div class="contact-container__input-group">
+                <label for="email" class="contact-container__input-group-label">Email</label>
+                <input type="email" id="email" name="email" class="contact-container__input-group-input" placeholder="Email" required>
+              </div>
+              <div class="contact-container__textarea-group">
+                <label for="message" class="contact-container__textarea-group-label"></label>
+                <textarea id="message" name="message" class="contact-container__textarea-group-textarea" placeholder="Message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="contact-container__button">Envoyer</button>
+            </form>
+            </div>
+        
+        </section>
     </main>
     
     <footer class="footer">
