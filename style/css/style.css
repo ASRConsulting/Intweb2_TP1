@@ -173,23 +173,37 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.chiffres__left-block, .chiffres__right-block {
+  flex: 1;
+}
+.chiffres__right-block {
+  display: flex;
+  flex-wrap: wrap;
+}
 .chiffres__block {
-  width: 45%;
+  flex: 1 0 50%;
+  text-align: center;
+  margin-bottom: 20px;
 }
-.chiffres__block--large {
-  margin-right: 30px;
+.chiffres__block-img {
+  width: 50%;
+  height: auto;
 }
-.chiffres__block--large-img {
+.chiffres__block-imgbig {
   width: 70%;
   height: auto;
 }
-.chiffres__block--small {
-  width: 50%;
-  margin-bottom: 20px;
+.chiffres__button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.chiffres__block--small-img {
-  width: 50%;
-  height: auto;
+.chiffres__button--primary {
+  background-color: #a29458;
+  color: #fff;
+}
+.chiffres__button--primary:hover {
+  background-color: #817646;
 }
 
 .footer__line {
