@@ -455,13 +455,13 @@ a {
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(17, 1fr); /* Adjusted to 4 columns */
-    grid-template-rows: repeat(8, auto);   /* Adjusted to 4 rows */
+    grid-template-columns: repeat(17, 1fr); 
+    grid-template-rows: repeat(8, auto);   
     grid-gap: 1em;
   }
 
   &__item {
-    width: 100%; /* Ensuring items take full grid cell width */
+    width: 100%; 
     height: auto;
     object-fit: cover;
   }
@@ -471,33 +471,33 @@ a {
   }
 
   &__img--1 {
-    grid-column: 1 / 5;  /* Occupe 3 colonnes */
-    grid-row: 3 / 7;     /* Occupe 3 lignes */
+    grid-column: 1 / 5;  
+    grid-row: 3 / 7;    
   }
 
   &__img--2 {
-    grid-column: 5 / 11;  /* Occupe 5 colonnes */
-    grid-row: 2 / 4;     /* Occupe 3 lignes */
+    grid-column: 5 / 11;  
+    grid-row: 2 / 4;     
   }
 
   &__img--3 {
-    grid-column: 11 / 14; /* Occupe 3 colonnes */
-    grid-row: 3 / 4;     /* Occupe 2 lignes */
+    grid-column: 11 / 14; 
+    grid-row: 3 / 4;     
   }
 
   &__img--4 {
-    grid-column: 14 / 17;  /* Occupe 3 colonnes */
-    grid-row: 3 / 7;     /* Occupe 3 lignes */
+    grid-column: 14 / 17;  
+    grid-row: 3 / 7;     
   }
 
   &__img--5 {
-    grid-column: 5 / 8;  /* Occupe 5 colonnes */
-    grid-row: 4 / 6;     /* Occupe 2 lignes */
+    grid-column: 5 / 8;  
+    grid-row: 4 / 6;    
   }
 
   &__img--6 {
-    grid-column: 8 / 14; /* Occupe 3 colonnes */
-    grid-row: 4 / 8;     /* Occupe 3 lignes */
+    grid-column: 8 / 14; 
+    grid-row: 4 / 8;     
   }
 }
 
@@ -516,14 +516,14 @@ a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px; // Add some spacing between blocks
+    gap: 20px; 
   }
 
   &__block {
     background-color: $quaternary-color;
     padding: 20px;
     border-radius: 10px;
-    flex: 1 1 calc(25% - 20px); // Four blocks in a row with some gap
+    flex: 1 1 calc(25% - 20px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 
@@ -620,7 +620,7 @@ a {
       &-link {
           text-decoration: underline;
           color: $primary-color;
-          font-size: 0.9rem; // Smaller text size
+          font-size: 0.9rem; 
           font-weight: 700;
           transition: color 0.3s;
 
@@ -693,5 +693,130 @@ a {
       &:hover {
           color: lighten($footer-text-color, 10%);
       }
+  }
+}
+
+// Media Queries
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+  
+  .nav__link {
+    margin-right: 1.5em;
+  }
+
+  .decouvrir__block {
+    flex: 1 0 45%;
+  }
+
+  .chiffres__block {
+    flex: 1 0 45%;
+  }
+  
+  .partenaires__block {
+    flex: 1 1 calc(33% - 20px);
+  }
+}
+
+
+@media (max-width: 960px) {
+  .container {
+    width: 95%;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .decouvrir__block {
+    flex: 1 0 100%;
+  }
+
+  .chiffres__left-block,
+  .chiffres__right-block {
+    flex: 1 0 100%;
+  }
+
+  .chiffres__block {
+    flex: 1 0 100%;
+  }
+  .galerie__grid{
+     grid-template-columns: repeat(2, 1fr);}
+
+  .partenaires__block {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+// Point de rupture pour 570px
+@media (max-width: 570px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-icon__bar {
+    display: block;
+  }
+
+  .nav__list {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav__list--active {
+    display: flex;
+  }
+
+  .search-bar__form {
+    flex-direction: column;
+  }
+ 
+  .partenaires__block {
+    flex: 1 1 100%;
+  }
+  
+  .galerie__grid {
+    grid-template-columns: 1fr;}
+  }
+  
+
+
+// Styles pour l'impression
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .header, .footer, .nav, .menu-icon, .search-bar, .contact-container .skip-link {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .content {
+    padding: 0;
+    margin: 0;
+  }
+
+  .decouvrir__block, .chiffres__block {
+    flex: 1 0 100%;
+    margin-bottom: 10px;
+  }
+
+  .partenaires__block {
+    flex: 1 1 100%;
+    page-break-inside: avoid;
   }
 }
