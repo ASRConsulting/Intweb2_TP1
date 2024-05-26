@@ -506,3 +506,51 @@ body {
   }
 }
 }
+
+// Info Section
+.info-section {
+  @extend .container;
+  &__separator {
+      width: 100%;
+      height: 2px;
+      background-color: $primary-color;
+      margin: 20px 0;
+  }
+
+  &__logo {
+      text-align: center;
+      margin: 20px 0;
+
+      &-img {
+          width: 150px;
+      }
+  }
+
+  &__nav {
+      text-align: center;
+
+      &-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: inline-flex;
+          gap: 20px;
+      }
+
+      &-item {
+          display: inline-block;
+      }
+
+      &-link {
+          text-decoration: underline;
+          color: $primary-color;
+          font-size: 0.9rem; // Smaller text size
+          font-weight: 700;
+          transition: color 0.3s;
+
+          &:hover {
+              color: darken($primary-color, 10%);
+          }
+      }
+  }
+}

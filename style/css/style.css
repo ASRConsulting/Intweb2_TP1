@@ -21,7 +21,7 @@ body {
   font-size: 3rem;
 }
 
-.container, .partenaires, .galerie, .contact-container, .chiffres {
+.container, .info-section, .partenaires, .galerie, .contact-container, .chiffres {
   max-width: 1200px;
   margin: 0 auto;
   width: 90%;
@@ -398,4 +398,41 @@ body {
 }
 .partenaires__link:hover {
   color: #c7bf99;
+}
+
+.info-section__separator {
+  width: 100%;
+  height: 2px;
+  background-color: #a29458;
+  margin: 20px 0;
+}
+.info-section__logo {
+  text-align: center;
+  margin: 20px 0;
+}
+.info-section__logo-img {
+  width: 150px;
+}
+.info-section__nav {
+  text-align: center;
+}
+.info-section__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+.info-section__nav-item {
+  display: inline-block;
+}
+.info-section__nav-link {
+  text-decoration: underline;
+  color: #a29458;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+.info-section__nav-link:hover {
+  color: #817646;
 }
