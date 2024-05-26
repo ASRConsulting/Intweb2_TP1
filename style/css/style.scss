@@ -425,3 +425,84 @@ body {
     grid-row: 4 / 8;     /* Occupe 3 lignes */
   }
 }
+
+.partenaires {
+  @extend .container;
+  padding: 50px 0;
+  text-align: center;
+  background-color: $tertiary-color;
+
+  &__title {
+    @extend .headings;
+    margin-bottom: 30px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; // Add some spacing between blocks
+  }
+
+  &__block {
+    background-color: $quaternary-color;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 calc(25% - 20px); // Four blocks in a row with some gap
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    &-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    &-text {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: $primary-color;
+    }
+
+    &-button {
+      @include button-base;
+      @include button-primary;
+      padding: 10px 20px;
+    }
+
+    &--style1 {
+      background-color: lighten($quaternary-color, 5%);
+    }
+
+    &--style2 {
+      background-color: lighten($quaternary-color, 10%);
+    }
+
+    &--style3 {
+      background-color: lighten($quaternary-color, 15%);
+    }
+
+    &--style4 {
+      background-color: lighten($quaternary-color, 20%);
+    }
+  }
+
+
+&__socials {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+&__link {
+  color: #a29458;
+  font-size: 1.5rem;
+
+  &:hover {
+      color: lighten(#a29458, 20%);
+  }
+}
+}
