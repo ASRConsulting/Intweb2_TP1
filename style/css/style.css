@@ -300,41 +300,36 @@ a {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
-.contact-container__input-group {
-  margin-bottom: 15px;
+.contact-container__input-group, .contact-container__textarea-group {
+  margin-bottom: 1rem;
 }
-.contact-container__input-group-label {
+.contact-container__input-group-label, .contact-container__textarea-group-label {
   display: none;
+  margin-bottom: 0.5rem;
 }
-.contact-container__input-group-input {
+.contact-container__input-group-input, .contact-container__textarea-group-input {
   width: 100%;
-  padding: 15px;
+  padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
 }
-.contact-container__input-group-input::placeholder {
-  color: #999;
-}
-.contact-container__input-group-input:invalid {
+.contact-container__input-group-input--error, .contact-container__textarea-group-input--error {
   border-color: red;
 }
-.contact-container__textarea-group {
-  margin-bottom: 15px;
+.contact-container__input-group-input--success, .contact-container__textarea-group-input--success {
+  border-color: green;
 }
-.contact-container__textarea-group-textarea {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  resize: vertical;
-}
-.contact-container__textarea-group-textarea::placeholder {
+.contact-container__input-group-input::placeholder, .contact-container__textarea-group-input::placeholder {
   color: #999;
 }
-.contact-container__textarea-group-textarea:invalid {
+.contact-container__input-group-input:invalid, .contact-container__textarea-group-input:invalid {
   border-color: red;
+}
+.contact-container__input-group-error, .contact-container__textarea-group-error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
 }
 .contact-container__button {
   border: none;
