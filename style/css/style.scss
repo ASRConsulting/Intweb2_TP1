@@ -394,19 +394,29 @@ a {
     border-radius: 10px;
   }
 
-  &__input-group {
-    margin-bottom: 15px;
+  &__input-group,
+  &__textarea-group {
+    margin-bottom: 1rem;
 
     &-label {
       display: none;
+      margin-bottom: 0.5rem;
     }
 
     &-input {
       width: 100%;
-      padding: 15px;
+      padding: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 16px;
+
+      &--error {
+        border-color: red;
+    }
+
+    &--success {
+        border-color: green;
+    }
 
       &::placeholder {
         color: #999;
@@ -416,28 +426,13 @@ a {
         border-color: red;
       }
     }
+    &-error {
+      color: red;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+  }
   }
 
-  &__textarea-group {
-    margin-bottom: 15px;
-
-    &-textarea {
-      width: 100%;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      resize: vertical;
-
-      &::placeholder {
-        color: #999;
-      }
-
-      &:invalid {
-        border-color: red;
-      }
-    }
-  }
 
   &__button {
     @include button-base;
